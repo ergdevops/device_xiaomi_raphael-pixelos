@@ -99,5 +99,13 @@ genfscon sysfs /kernel/boot_cdsp/boot                                           
 # genfscon sysfs /devices/platform/vendor/vendor:extcon_usb1/wakeup                                                                                  u:object_r:sysfs_wakeup:s0
 # genfscon sysfs /devices/virtual/diag/diag/wakeup                                                                                                   u:object_r:sysfs_wakeup:s0
 
-# CSC DC Dimming
-# genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/dc_dim u:object_r:vendor_sysfs_graphics:s0
+# HBM
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/hbm                                                                               u:object_r:vendor_sysfs_graphics:s0
+
+# UDFPS Sensor
+genfscon sysfs /devices/platform/goodix_ts.0/udfps_pressed                                                                                          u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/platform/goodix_ts.0/udfps_enabled                                                                                          u:object_r:vendor_sysfs_sensors:s0
+
+# single tap sensor
+genfscon sysfs /devices/platform/goodix_ts.0/single_tap_pressed                                                                                     u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/platform/goodix_ts.0/single_tap_enabled                                                                                     u:object_r:vendor_sysfs_sensors:s0
