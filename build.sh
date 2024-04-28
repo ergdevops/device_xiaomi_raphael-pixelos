@@ -1,3 +1,3 @@
 . build/envsetup.sh
-lunch derp_raphael-user
+lunch aosp_raphael-ap1a-user
 mka bacon
