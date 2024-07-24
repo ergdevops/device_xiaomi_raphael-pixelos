@@ -25,7 +25,7 @@ TARGET_EXCLUDE_QCOM_SEPOLICY := true
 TARGET_KERNEL_VERSION := 4.14
 # TARGET_ADRENO_COMPONENT_VARIANT := adreno-msmnile
 TARGET_BOARD_PLATFORM := msmnile
-TARGET_COMMON_QTI_COMPONENTS := audio av gps wfd overlay
+TARGET_COMMON_QTI_COMPONENTS := audio av gps wfd overlay wlan-legacy
 
 # common
 $(call inherit-product, device/qcom/common/common.mk)
@@ -33,6 +33,9 @@ $(call inherit-product, device/qcom/common/common.mk)
 # audio
 $(call inherit-product, device/qcom/common/system/audio/qti-audio.mk)
 $(call inherit-product, device/qcom/common/vendor/audio/qti-audio.mk)
+
+# wlan-legacy
+$(call inherit-product, device/qcom/common/vendor/wlan-legacy/qti-wlan-legacy.mk)
 
 # av
 $(call inherit-product, device/qcom/common/system/av/qti-av.mk)
