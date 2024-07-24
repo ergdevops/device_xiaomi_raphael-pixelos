@@ -20,10 +20,40 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/raphael/raphael-vendor.mk)
 
-# # MiuiCamera
-# $(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
+# Get Qcom components
+TARGET_EXCLUDE_QCOM_SEPOLICY := true
+TARGET_KERNEL_VERSION := 4.14
+# TARGET_ADRENO_COMPONENT_VARIANT := adreno-msmnile
+TARGET_BOARD_PLATFORM := msmnile
+TARGET_COMMON_QTI_COMPONENTS := audio av gps wfd overlay
 
-# Enable project quotas and casefolding for emulated storage without sdcardfs
+# common
+$(call inherit-product, device/qcom/common/common.mk)
+
+# audio
+$(call inherit-product, device/qcom/common/system/audio/qti-audio.mk)
+$(call inherit-product, device/qcom/common/vendor/audio/qti-audio.mk)
+
+# av
+$(call inherit-product, device/qcom/common/system/av/qti-av.mk)
+
+# gps
+$(call inherit-product, device/qcom/common/system/gps/qti-gps.mk)
+$(call inherit-product, device/qcom/common/vendor/gps/qti-gps.mk)
+
+# overlay
+$(call inherit-product, device/qcom/common/system/overlay/qti-overlay.mk)
+$(call inherit-product, device/qcom/common/vendor/overlay/qti-overlay.mk)
+
+# wfd
+$(call inherit-product, device/qcom/common/system/wfd/qti-wfd.mk)
+
+# # perf
+# $(call inherit-product, device/qcom/common/system/perf/qti-perf.mk)
+# $(call inherit-product, device/qcom/common/vendor/perf/qti-perf.mk)
+
+
+# Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Add common definitions for Qualcomm
