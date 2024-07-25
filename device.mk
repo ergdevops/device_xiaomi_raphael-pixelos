@@ -44,6 +44,23 @@ $(call inherit-product, device/qcom/common/system/av/qti-av.mk)
 $(call inherit-product, device/qcom/common/system/gps/qti-gps.mk)
 $(call inherit-product, device/qcom/common/vendor/gps/qti-gps.mk)
 
+# bt
+$(call inherit-product, device/qcom/common/system/bt/qti-bt.mk)
+$(call inherit-product, device/qcom/common/vendor/bt/qti-bt.mk)
+
+# charging
+$(call inherit-product, device/qcom/common/vendor/charging/qti-charging.mk)
+
+# display
+$(call inherit-product, device/qcom/common/system/display/qti-display.mk)
+$(call inherit-product, device/qcom/common/vendor/display/qti-display.mk)
+
+# keymaster
+$(call inherit-product, device/qcom/common/vendor/keymaster/qti-keymaster.mk)
+
+# qseecomd-legacy
+$(call inherit-product, device/qcom/common/vendor/qseecomd-legacy/qti-qseecomd-legacy.mk)
+
 # overlay
 $(call inherit-product, device/qcom/common/system/overlay/qti-overlay.mk)
 $(call inherit-product, device/qcom/common/vendor/overlay/qti-overlay.mk)
