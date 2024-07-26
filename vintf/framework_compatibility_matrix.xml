@@ -809,20 +809,4 @@
                 <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-    <name>vendor.qti.hardware.qccsyshal</name>
-    <version>1.0-2</version>
-    <interface>
-        <name>IQccsyshal</name>
-        <instance>qccsyshal</instance>
-    </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-    <name>vendor.qti.hardware.wifi.wificfr</name>
-    <version>1.0</version>
-    <interface>
-        <name>IWificfr</name>
-        <instance>wificfr</instance>
-    </interface>
-    </hal>
 </compatibility-matrix>
