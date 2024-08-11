@@ -42,7 +42,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/xiaomi \
-    hardware/derp/interfaces/power-libperfmgr \
+    hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client
 
 # Hardware
@@ -363,10 +363,6 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
-
-# KProfiles
-PRODUCT_PACKAGES += \
-    KProfiles
 
 # Lights
 PRODUCT_PACKAGES += \
