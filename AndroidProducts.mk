@@ -13,9 +13,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_raphael.mk
+    $(LOCAL_DIR)/everest_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_raphael-user \
-    derp_raphael-userdebug \
-    derp_raphael-eng
+    everest_raphael-user \
+    everest_raphael-userdebug \
+    everest_raphael-eng

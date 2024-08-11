@@ -1,6 +1,7 @@
 # Camera
 persist.vendor.camera.privapp.list=com.android.camera
 log.tag.CHIUSECASE=ERROR
+persist.sys.cam.skip_detach_image=true
 
 # Charger
 ro.charger.enable_suspend=true

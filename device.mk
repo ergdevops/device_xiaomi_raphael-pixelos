@@ -20,8 +20,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/raphael/raphael-vendor.mk)
 
-# # MiuiCamera
-# $(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
+# MiuiCamera
+$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -42,7 +42,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/xiaomi \
-    hardware/derp/interfaces/power-libperfmgr \
+    hardware/everest/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client
 
 # Hardware

@@ -20,8 +20,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit some common everest stuff.
+$(call inherit-product, vendor/everest/config/common_full_phone.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -32,17 +32,19 @@ TARGET_INCLUDE_PIXEL_CHARGER := true
 # Disable/Enable Blur Support, default is false
 TARGET_ENABLE_BLUR := true
 
-# Derp
-DERP_BUILDTYPE := Official
-#TARGET_USES_PICO_GAPPS := true
+# Everest flags
+EVEREST_MAINTAINER := "ergdev"
+TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
-DERP_VERSION_APPEND_TIME_OF_DAY := true
+WITH_GAPPS := true
+TARGET_INCLUDE_PIXEL_LAUNCHER := false
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Quick Tap Feature
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := derp_raphael
+PRODUCT_NAME := everest_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro
